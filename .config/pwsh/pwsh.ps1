@@ -144,7 +144,7 @@ function gowall { wsl gowall $args }
 Import-Module Catppuccin
 $Flavor = $Catppuccin['Mocha']
 
-oh-my-posh init pwsh --config 'C:\Users\Howl\.local\share\scoop\apps\oh-my-posh\current\themes\emodipt.omp.json' | Invoke-Expression
+oh-my-posh init pwsh --config "C:\Users\Howl\.config\oh-my-posh\emodipt_mocha.omp.json" | Invoke-Expression
 
 $ENV:FZF_DEFAULT_OPTS=@"
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8
