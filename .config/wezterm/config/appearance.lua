@@ -1,8 +1,9 @@
 local gpu_adapters = require('utils.gpu-adapter')
 local backdrops = require('utils.backdrops')
-local colors = require('wezterm').color.get_builtin_schemes()['Catppuccin Mocha']
+local colors = require('colors.custom')
+
+-- local colors = require('wezterm').color.get_builtin_schemes()['Catppuccin Mocha']
 -- colors.background = 'black'
--- local colors = require('colors.custom')
 
 return {
    max_fps = 120,
