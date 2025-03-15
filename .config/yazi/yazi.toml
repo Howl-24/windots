@@ -19,8 +19,8 @@ title_format   = "Yazi: {cwd}"
 [preview]
 wrap            = "no"
 tab_size        = 2
-max_width       = 600
-max_height      = 900
+max_width       = 1386
+max_height      = 1862
 cache_dir       = ""
 image_delay     = 30
 image_filter    = "triangle"
@@ -88,7 +88,6 @@ image_bound      = [ 0, 0 ]
 suppress_preload = false
 
 [plugin]
-
 fetchers = [
 	# Mimetype
 	{ id = "mime", name = "*", run = "mime", prio = "high" },
@@ -147,6 +146,9 @@ previewers = [
 	{ mime = "inode/empty", run = "empty" },
 	# Fallback
 	{ name = "*", run = "file" },
+]
+prepend_previewers = [
+  { name = "*.md", run = "glow" },
 ]
 
 [input]
@@ -220,3 +222,13 @@ sort_by      	 = "none"
 sort_sensitive = false
 sort_reverse 	 = false
 sort_translit  = false
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*"
+run  = "git"
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*/"
+run  = "git"

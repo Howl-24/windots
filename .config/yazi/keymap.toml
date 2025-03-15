@@ -4,6 +4,17 @@
 
 [manager]
 
+prepend_keymap = [
+    # glow.yazi
+    { on = ["<C-i>"], run = "seek 5" },
+    { on = ["<C-o>"], run = "seek -5" },
+	# toggle-pane.yazi
+	{ on = "T", run = "plugin toggle-pane min-preview", desc = "Show or hide the preview pane"},
+	{ on = "T", run = "plugin toggle-pane max-preview", desc = "Maximize or restore the preview pane"},
+	# system-clipboard.yazi
+	{ on = ["<C-y>"], run = "plugin system-clipboard" },
+]
+
 keymap = [
 	{ on = "<Esc>", run = "escape",             desc = "Exit visual mode, clear selected, or cancel search" },
 	{ on = "<C-[>", run = "escape",             desc = "Exit visual mode, clear selected, or cancel search" },
