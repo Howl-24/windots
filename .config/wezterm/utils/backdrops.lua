@@ -80,7 +80,7 @@ function BackDrops:_create_opts()
          horizontal_align = 'Center',
       },
       {
-         source = { Color = colors.background },
+         source = { Color = '#000000' },
          height = '120%',
          width = '120%',
          vertical_offset = '-10%',
