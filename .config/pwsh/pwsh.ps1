@@ -10,16 +10,16 @@ Set-PSReadLineOption -ShowToolTips
 Set-PSReadLineOption -PredictionSource History
 # Set the color for Prediction (auto-suggestion)
 Set-PSReadLineOption -Colors @{
-  Command            = 'Magenta'
-  Number             = 'DarkBlue'
-  Member             = 'DarkBlue'
-  Operator           = 'DarkBlue'
-  Type               = 'DarkBlue'
-  Variable           = 'DarkGreen'
-  Parameter          = 'DarkGreen'
-  ContinuationPrompt = 'DarkBlue'
-  Default            = 'DarkBlue'
-  InlinePrediction   = 'DarkGray'
+  Command            = '#cba6f7'  # Mauve
+  Number             = '#f9e2af'  # Yellow
+  Member             = '#89b4fa'  # Blue
+  Operator           = '#f38ba8'  # Red
+  Type               = '#b4befe'  # Lavender
+  Variable           = '#a6e3a1'  # Green
+  Parameter          = '#fab387'  # Peach
+  ContinuationPrompt = '#74c7ec'  # Sapphire
+  Default            = '#cdd6f4'  # Text
+  InlinePrediction   = '#6c7086'  # Surface0
 }
 
 # Yazi Shell wrapper
