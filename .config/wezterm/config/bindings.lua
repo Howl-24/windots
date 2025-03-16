@@ -49,9 +49,15 @@ local keys = {
    },
 
    -- cursor movement --
-   { key = 'LeftArrow',  mods = mod.SUPER,     action = act.SendString '\u{1b}OH' },
-   { key = 'RightArrow', mods = mod.SUPER,     action = act.SendString '\u{1b}OF' },
-   { key = 'Backspace',  mods = mod.SUPER,     action = act.SendString '\u{15}' },
+   { key = 'h',          mods = mod.SUPER,     action = act.SendKey { key = 'LeftArrow' }, },
+   { key = 'l',          mods = mod.SUPER,     action = act.SendKey { key = 'RightArrow' }, },
+   { key = 'k',          mods = mod.SUPER,     action = act.SendKey { key = 'UpArrow' }, },
+   { key = 'j',          mods = mod.SUPER,     action = act.SendKey { key = 'DownArrow' }, },
+   { key = 'u',          mods = mod.SUPER,     action = act.SendKey { key = 'LeftArrow', mods = 'CTRL' }, },
+   { key = 'p',          mods = mod.SUPER,     action = act.SendKey { key = 'RightArrow', mods = 'CTRL' }, },
+   { key = 'u',          mods = mod.SUPER_REV,     action = act.SendString '\u{1b}OH' },
+   { key = 'p',          mods = mod.SUPER_REV,     action = act.SendString '\u{1b}OF' },
+   -- { key = 'Backspace',  mods = mod.SUPER,     action = act.SendString '\u{15}' },
 
    -- copy/paste --
    { key = 'c',          mods = 'CTRL|SHIFT',  action = act.CopyTo('Clipboard') },
@@ -60,7 +66,7 @@ local keys = {
    -- tabs --
    -- tabs: spawn+close
    { key = 't',          mods = mod.SUPER,     action = act.SpawnTab('DefaultDomain') },
-   { key = 't',          mods = mod.SUPER_REV, action = act.SpawnTab({ DomainName = 'WSL:Ubuntu' }) },
+   { key = 't',          mods = mod.SUPER_REV, action = act.SpawnTab({ DomainName = 'WSL.Arch' }) },
    { key = 'w',          mods = mod.SUPER_REV, action = act.CloseCurrentTab({ confirm = false }) },
 
    -- tabs: navigation
@@ -148,7 +154,7 @@ local keys = {
       }),
    },
    {
-      key = 'b',
+      key = 'm',
       mods = mod.SUPER,
       action = wezterm.action_callback(function(window, _pane)
          backdrops:toggle_focus(window)
@@ -173,10 +179,10 @@ local keys = {
    { key = 'w',     mods = mod.SUPER,     action = act.CloseCurrentPane({ confirm = false }) },
 
    -- panes: adjust pane size
-   { key = 'i',     mods = mod.SUPER_REV, action = act.AdjustPaneSize({ 'Up', 1 })},
-   { key = 'o',     mods = mod.SUPER_REV, action = act.AdjustPaneSize({ 'Down', 1 })},
-   { key = 'u',     mods = mod.SUPER_REV, action = act.AdjustPaneSize({ 'Left', 1 })},
-   { key = 'p',     mods = mod.SUPER_REV, action = act.AdjustPaneSize({ 'Right', 1 })},
+   { key = 'K',     mods = mod.SUPER_REV, action = act.AdjustPaneSize({ 'Up', 1 })},
+   { key = 'J',     mods = mod.SUPER_REV, action = act.AdjustPaneSize({ 'Down', 1 })},
+   { key = 'H',     mods = mod.SUPER_REV, action = act.AdjustPaneSize({ 'Left', 1 })},
+   { key = 'L',     mods = mod.SUPER_REV, action = act.AdjustPaneSize({ 'Right', 1 })},
 
    -- panes: navigation
    { key = 'k',     mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Up') },
@@ -184,7 +190,7 @@ local keys = {
    { key = 'h',     mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Left') },
    { key = 'l',     mods = mod.SUPER_REV, action = act.ActivatePaneDirection('Right') },
    {
-      key = 'g',
+      key = 's',
       mods = mod.SUPER_REV,
       action = act.PaneSelect({ alphabet = '1234567890', mode = 'SwapWithActiveKeepFocus' }),
    },
@@ -192,8 +198,8 @@ local keys = {
    -- panes: scroll pane
    { key = 'o',        mods = mod.SUPER, action = act.ScrollByLine(-5) },
    { key = 'i',        mods = mod.SUPER, action = act.ScrollByLine(5) },
-   { key = 'PageUp',   mods = 'NONE',    action = act.ScrollByPage(-0.75) },
-   { key = 'PageDown', mods = 'NONE',    action = act.ScrollByPage(0.75) },
+   { key = 'o',   mods = mod.SUPER_REV,    action = act.ScrollByPage(-0.75) },
+   { key = 'i', mods = mod.SUPER_REV,    action = act.ScrollByPage(0.75) },
 
    -- key-tables --
    -- resizes fonts
