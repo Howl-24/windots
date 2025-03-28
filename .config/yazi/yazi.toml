@@ -19,8 +19,8 @@ title_format   = "Yazi: {cwd}"
 [preview]
 wrap            = "no"
 tab_size        = 2
-max_width       = 600 #1386
-max_height      = 900 #1862
+max_width       = 1386 #default 600 max 1386
+max_height      = 1862 #default 900 max 1862
 cache_dir       = ""
 image_delay     = 30
 image_filter    = "triangle"
@@ -107,10 +107,13 @@ spotters = [
 ]
 preloaders = [
 	# Image
-	{ mime = "image/{avif,hei?,jxl,svg+xml}", run = "magick" },
-	{ mime = "image/*", run = "image" },
+	# { mime = "image/{avif,hei?,jxl,svg+xml}", run = "magick" },
+	# { mime = "image/*", run = "image" },
 	# Video
-	{ mime = "video/*", run = "video" },
+	# { mime = "video/*", run = "video" },
+	# mediainfo.yazi
+	{ mime = "{audio,video,image}/*", run = "mediainfo" },
+    { mime = "application/subrip", run = "mediainfo" },
 	# PDF
 	{ mime = "application/pdf", run = "pdf" },
 	# Font
@@ -125,10 +128,13 @@ previewers = [
 	# JSON
 	{ mime = "application/{json,ndjson}", run = "json" },
 	# Image
-	{ mime = "image/{avif,hei?,jxl,svg+xml}", run = "magick" },
-	{ mime = "image/*", run = "image" },
+	# { mime = "image/{avif,hei?,jxl,svg+xml}", run = "magick" },
+	# { mime = "image/*", run = "image" },
 	# Video
-	{ mime = "video/*", run = "video" },
+	# { mime = "video/*", run = "video" },
+	# mediainfo.yazi
+	{ mime = "{audio,video,image}/*", run = "mediainfo"},
+    { mime = "application/subrip", run = "mediainfo" },
 	# PDF
 	{ mime = "application/pdf", run = "pdf" },
 	# Archive

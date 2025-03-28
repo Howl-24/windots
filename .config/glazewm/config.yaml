@@ -308,7 +308,7 @@ window_effects:
       enabled: false
     transparency:
       enabled: true
-      opacity: 100%
+      opacity: 99%
   other_windows:
     border:
       color: '#a1a1a1'
@@ -320,7 +320,7 @@ window_effects:
       enabled: false
     transparency:
       enabled: true
-      opacity: 100%
+      opacity: 95%
 window_rules:
 - commands:
   - ignore

@@ -2,7 +2,7 @@
 
 body {
   color: rgb(255 255 255 / 90%);
-  font-family: ui-monospace, monospace;
+  font-family: "JetBrainsMono Nerd Font", monospace;
   font-size: 12px;
   overflow: hidden;
 }
@@ -90,7 +90,7 @@ body,
 }
 
 .kip-blocks {
-  background: #1e1e2e;
+  background: rgba(30, 30, 46, 0.9);
   border: 1px solid #8dbcff;
   border-radius: 8px;
   padding: 0 8px;
@@ -106,7 +106,7 @@ body,
 }
 
 .right {
-  background: #1e1e2e;
+  background: rgba(30, 30, 46, 0.9);
   border: 1px solid #8dbcff;
   border-radius: 8px;
   padding: 0 8px;

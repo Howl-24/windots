@@ -5,9 +5,6 @@
 [manager]
 
 prepend_keymap = [
-    # glow.yazi
-    { on = ["<C-i>"], run = "seek 5" },
-    { on = ["<C-o>"], run = "seek -5" },
 	# toggle-pane.yazi
 	{ on = "T", run = "plugin toggle-pane min-preview", desc = "Show or hide the preview pane"},
 	{ on = "T", run = "plugin toggle-pane max-preview", desc = "Maximize or restore the preview pane"},

@@ -128,13 +128,13 @@ function global:__zoxide_zi {
 Set-Alias -Name z -Value __zoxide_z -Option AllScope -Scope Global -Force
 Set-Alias -Name zi -Value __zoxide_zi -Option AllScope -Scope Global -Force
 Set-Alias -Name ls -Value lsd -Option AllScope -Scope Global -Force
+Set-Alias -Name nv -Value nvim -Option AllScope -Scope Global -Force
 function reimufetch { fastfetch -c "C:\Users\Howl\.config\fastfetch\reimu.jsonc" }
 function zsh { wsl zsh $args }
 function bash { wsl bash $args }
 function pacman { wsl sudo pacman $args }
 function yay { wsl yay $args }
 function tmux { wsl tmux $args }
-function wtfutil { wsl wtfutil $args }
 function cmatrix { wsl cmatrix $args }
 function tty-clock { wsl tty-clock $args }
 function cbonsai { wsl cbonsai $args }

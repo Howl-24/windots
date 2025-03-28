@@ -28,5 +28,10 @@ use = "orhnk/system-clipboard"
 rev = "7775a80"
 hash = "c96bbca8ab5ecf556e45da0007170097"
 
+[[plugin.deps]]
+use = "boydaihungst/mediainfo"
+rev = "447fe95"
+hash = "8b87850816df580eb0b6b7fe3215a51"
+
 [flavor]
 deps = []

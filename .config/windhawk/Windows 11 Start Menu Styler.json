@@ -109,7 +109,7 @@
     "controlStyles[39].styles[1]": "Width=500",
     "controlStyles[39].styles[2]": "MaxWidth=500",
     "controlStyles[21].styles[4]": "Margin=8",
-    "controlStyles[27].styles[2]": "FontFamily=JetBrainsMono NF",
+    "controlStyles[27].styles[2]": "FontFamily=JetBrainsMono Nerd Font",
     "webContentCustomJs": "",
     "controlStyles[35].styles[2]": "Background=#1e1e2e"
   }
